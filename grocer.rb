@@ -18,6 +18,11 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  
+  coupons.each do |i|
+    if cart.has_key?(i[:item])
+      cart[:item]
+  
 end
 
 def apply_clearance(cart)
