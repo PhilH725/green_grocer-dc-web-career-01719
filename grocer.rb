@@ -59,6 +59,7 @@ def checkout(cart, coupons)
       total += (data[:price] * data[:count])
     elsif data[:count] == 1
       total += data[:price]
+      puts total
     end
   end
   
