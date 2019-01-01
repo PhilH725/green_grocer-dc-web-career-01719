@@ -53,7 +53,11 @@ def checkout(cart, coupons)
   new_cart = apply_coupons(new_cart, coupons)
   new_cart = apply_clearance(new_cart)
   new_cart.each do |food, data|
-    total += data[:price]
+    if data[:count] > 1
+      total += (data[:price] * data[:count])
+    else
+      total += data[:price]
+    end
   end
   
   if total > 100.0
