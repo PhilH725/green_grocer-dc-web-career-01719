@@ -1,6 +1,8 @@
 
 def consolidate_cart(cart)
   # code here
+  new_cart_hash = {}
+  
   
   puts cart
   
