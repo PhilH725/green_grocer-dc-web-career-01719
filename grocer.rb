@@ -56,7 +56,7 @@ def checkout(cart, coupons)
   new_cart.each do |food, data|
     if data[:count] > 1
       total += (data[:price] * data[:count])
-    else
+    elsif data[:count] == 1
       total += data[:price]
     end
   end
