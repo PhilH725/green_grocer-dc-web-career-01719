@@ -47,6 +47,8 @@ end
 
 def checkout(cart, coupons)
   
+  total = 0
+  
   if cart.length == 1
     small_cart = consolidate_cart(cart)
     small_c_cart = apply_coupons(small_cart, coupons)
