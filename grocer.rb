@@ -55,7 +55,11 @@ def checkout(cart, coupons)
   new_cart.each do |food, data|
     total += data[:price]
   end
-  total
- 
+  
+  if total > 100.0
+    total = (total *0.9).round(1)
+  else
+    total
+  end
 
 end
