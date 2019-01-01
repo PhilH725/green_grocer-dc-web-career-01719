@@ -24,7 +24,10 @@ def apply_coupons(cart, coupons)
       cart.each do |food, data|
         cart[food].delete
         cart[:item.to_s+"W/COUPON"] = {}
-  
+      end
+    end
+  end
+  cart
 end
 
 def apply_clearance(cart)
