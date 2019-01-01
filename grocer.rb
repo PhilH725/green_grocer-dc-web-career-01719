@@ -53,6 +53,7 @@ def checkout(cart, coupons)
     checked_cart = apply_clearance(small_c_cart)
     checked_cart.each do |food, data|
       total = data[:price]
+    end
   end   
  
 
