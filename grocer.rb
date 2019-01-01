@@ -13,12 +13,9 @@ def consolidate_cart(cart)
         new_cart_hash[food] = {:price => data[:price], :clearance => data[:clearance], :count => 1}
       end
     end
-    puts new_cart_hash
-    new_cart_hash
   end
-  
-  #puts cart
-  
+  puts new_cart_hash
+  new_cart_hash
 end
 
 def apply_coupons(cart, coupons)
