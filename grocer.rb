@@ -53,6 +53,7 @@ def checkout(cart, coupons)
   new_cart = apply_coupons(new_cart, coupons)
   new_cart = apply_clearance(new_cart)
   
+  puts cart
   puts new_cart
   puts coupons
   new_cart.each do |food, data|
