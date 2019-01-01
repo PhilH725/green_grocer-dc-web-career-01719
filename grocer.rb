@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   # code here
   
   coupons.each do |i|
-    if cart.has_key?(i[:item])
+    if cart.has_key?(i[:item]) and cart[i[:item]] >= i[:num] 
       active_item = cart[i[:item]]
       name = "#{i[:item].to_s} W/COUPON"
       if cart.has_key?(name)
