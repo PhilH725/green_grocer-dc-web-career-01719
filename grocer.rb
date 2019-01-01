@@ -11,6 +11,10 @@ def consolidate_cart(cart)
         new_cart_hash[food][:count] += 1
       else
         new_cart_hash[food] = {:price => data[:price], :clearance => data[:clearance], :count => 1}
+      end
+    end
+    puts new_cart_hash
+    new_cart_hash
   end
   
   #puts cart
