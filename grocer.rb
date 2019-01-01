@@ -6,7 +6,7 @@ def consolidate_cart(cart)
   new_cart_hash = {}
   element = {:price => 0.0, :clearance => false, :count => 0}
   cart.each do |i|
-    if new_cart_hash.include?(o)
+    if new_cart_hash.
   end
   
   #puts cart
