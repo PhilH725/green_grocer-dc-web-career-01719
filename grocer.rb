@@ -21,8 +21,9 @@ def apply_coupons(cart, coupons)
   
   coupons.each do |i|
     if cart.has_key?(i[:item])
+      active_item = cart[i[:item]]
       name = "#{i[:item].to_s} W/COUPON"
-      cart[name] = {:price => i[:price], :clearance => i[:clearance], :count => 1}
+      cart[name] = {:price => i[:price], :clearance => active_item[:clearance], :count => 1}
     end
   end
   cart
