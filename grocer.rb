@@ -52,6 +52,7 @@ def checkout(cart, coupons)
   new_cart = consolidate_cart(cart)
   new_cart = apply_coupons(new_cart, coupons)
   new_cart = apply_clearance(new_cart)
+  puts new_cart
   new_cart.each do |food, data|
     if data[:count] > 1
       total += (data[:price] * data[:count])
