@@ -4,7 +4,6 @@ require "pry"
 def consolidate_cart(cart)
   # code here
   new_cart_hash = {}
-  element = {:price => 0.0, :clearance => false, :count => 0}
   cart.each do |i|
     i.each do |food, data|
       if new_cart_hash.has_key?(food)
