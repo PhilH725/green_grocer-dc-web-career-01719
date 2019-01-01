@@ -26,6 +26,8 @@ def apply_coupons(cart, coupons)
       if cart.has_key?(name) and active_item[:count] >= i[:num]
         cart[name][:count] += 1
         active_item[:count] -= i[:num]
+      elsif cart.has_key?(name)
+        puts "not enough items for coupon"
       else
         cart[name] = {:price => i[:cost], :clearance => active_item[:clearance], :count => 1}
         active_item[:count] -= i[:num]
