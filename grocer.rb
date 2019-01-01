@@ -22,7 +22,8 @@ def apply_coupons(cart, coupons)
   coupons.each do |i|
     if cart.has_key?(i[:item])
       cart.each do |food, data|
-        cart
+        cart[food].delete
+        cart[:item.to_s+"W/COUPON"] = {}
   
 end
 
