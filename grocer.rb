@@ -54,6 +54,7 @@ def checkout(cart, coupons)
     checked_cart.each do |food, data|
       total = data[:price]
     end
+    total
   end   
  
 
