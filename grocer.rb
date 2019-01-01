@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
     if cart.has_key?(i[:item])
       active_item = cart[i[:item]]
       name = "#{i[:item].to_s} W/COUPON"
-      if cart.has_key?(name)
+      if cart.has_key?(name) and active_item[:count] >= i[:num]
         cart[name][:count] += 1
         active_item[:count] -= i[:num]
       else
