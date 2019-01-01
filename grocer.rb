@@ -49,23 +49,13 @@ def checkout(cart, coupons)
   
   total = 0
   
-  if cart.length == 1
-    small_cart = consolidate_cart(cart)
-    small_c_cart = apply_coupons(small_cart, coupons)
-    checked_cart = apply_clearance(small_c_cart)
-    checked_cart.each do |food, data|
-      total = data[:price]
-    end
-    total
-  else
-    new_cart = consolidate_cart(cart)
-    coupon_cart = apply_coupons(new_cart, coupons)
-    clearance_cart = apply_clearance(coupon_cart)
-    clearance_cart.each do |food, data|
-      total += data[:price]
-    end
-    total
-  end   
+  new_cart = consolidate_cart(cart)
+  coupon_cart = apply_coupons(new_cart, coupons)
+  clearance_cart = apply_clearance(coupon_cart)
+  clearance_cart.each do |food, data|
+    total += data[:price]
+  end
+  total
  
 
 end
