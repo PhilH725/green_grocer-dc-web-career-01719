@@ -6,7 +6,11 @@ def consolidate_cart(cart)
   new_cart_hash = {}
   element = {:price => 0.0, :clearance => false, :count => 0}
   cart.each do |i|
-    if new_cart_hash.
+    i.each do |food, data|
+      if new_cart_hash.has_key?(food)
+        new_cart_hash[food][:count] += 1
+      else
+        new_cart_hash[food] = {:price => 0.0, :clearance => false, :count => 0}
   end
   
   #puts cart
