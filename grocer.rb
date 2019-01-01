@@ -51,7 +51,8 @@ def checkout(cart, coupons)
     small_cart = consolidate_cart(cart)
     small_c_cart = apply_coupons(small_cart, coupons)
     checked_cart = apply_clearance(small_c_cart)
-    puts checked_cart
+    checked_cart.each do |food, data|
+      total = data[:price]
   end   
  
 
