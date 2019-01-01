@@ -47,11 +47,12 @@ end
 
 def checkout(cart, coupons)
   
-  idk = consolidate_cart(cart)
-  total = 0
-  idk.each do |food, data|
-    total += data[:price]
-  end
-  total
+  if cart.length == 1
+    small_cart = consolidate_cart(cart)
+    small_c_cart = apply_coupons(small_cart, coupons)
+    checked_cart = apply_clearance(small_c_cart)
+    checked_cart[:price]
+  end   
+ 
 
 end
