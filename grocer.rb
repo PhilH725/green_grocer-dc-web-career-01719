@@ -1,11 +1,15 @@
+require "pry"
+
 
 def consolidate_cart(cart)
   # code here
   new_cart_hash = {}
   element = {:price => 0.0, :clearance => false, :count => 0}
-  cart.
+  cart.each do |i|
+    binding.pry
+  end
   
-  puts cart
+  #puts cart
   
 end
 
