@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
   
   coupons.each do |i|
     if cart.has_key?(i[:item])
-      name = "#{:item.to_s} W/COUPON"
+      name = "#{i[:item].to_s} W/COUPON"
       cart[name] = {}
     end
   end
