@@ -57,6 +57,14 @@ def checkout(cart, coupons)
       total = data[:price]
     end
     total
+  else
+    new_cart = consolidate_cart(cart)
+    coupon_cart = apply_coupons(new_cart, coupons)
+    clearance_cart = apply_clearance(coupon_cart)
+    clearance_cart.each do |food, data|
+      total += data[:price]
+    end
+    total
   end   
  
 
